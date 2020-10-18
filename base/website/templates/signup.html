@@ -1,0 +1,114 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Messenger</title>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"> -->
+    <link rel="stylesheet" href="{% static 'css/bulma.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+ 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  </head>
+  <body>
+        
+<section class="section">
+  <div class="container">
+    <div class="columns is-mobile has-text-centered">
+      <div class="column is-half is-offset-one-quarter">
+
+
+    <!-- Card for Sign in/ login START -->
+        <div class="card">
+          <div class="card-content"> 
+
+
+
+
+
+<!-- <div class="row center-align"> -->
+    <form method="post" action="" role="form">
+    {% csrf_token %}
+    <h3 class="title is-3">Create an account</h3>
+
+            <!-- Username Field -->
+            <div class="field">
+              <p class="control has-icons-left">
+                <label for="Username" class="label is-medium">Username</label>
+                {{ form.username }}
+                <span class="icon is-small is-left">
+                  <i class="fas fa-lock"></i>
+                </span>
+              </p>
+            </div>
+            <!-- END Username -->
+
+            <!-- Email Field -->
+            <div class="field">
+              <p class="control has-icons-left">
+                <label class="label is-medium">Email</label>
+                {{ form.email }}
+                <span class="icon is-small is-left">
+                  <i class="fas fa-lock"></i>
+                </span>
+              </p>
+            </div>
+            <!-- END Email Field -->
+
+
+            <!-- Password Field -->
+            <div class="field">
+              <p class="control has-icons-left">
+                <label class="label is-medium">Password</label>
+                {{ form.password }}
+                <span class="icon is-small is-left">
+                  <i class="fas fa-lock"></i>
+                </span>
+              </p>
+            </div>
+          <!-- END Password Field -->
+
+
+            <!-- Confirm-Password Field -->
+            <div class="field">
+              <p class="control has-icons-left">
+                <label class="label is-medium">Re-type Password</label>
+                {{ form.confirm_password }}
+                <span class="icon is-small is-left">
+                  <i class="fas fa-lock"></i>
+                </span>
+              </p>
+            </div>
+          <!-- END Confirm-Password Field -->
+
+
+      <div class="row">
+        <div class="col s12">
+          <span style="color: red; font-weight: bold;">{{ form.errors }}</span>
+        </div>
+      </div>
+      <!-- Button -->
+      <div class="field">
+        <p class="control">
+          <button type="submit" name="action " class="button is-success">
+            Create
+          </button>
+        </p>
+      </div>
+      <!-- End Button -->
+
+      <!-- <button class="btn waves-effect waves-light" type="submit" name="action"><i class="material-icons left">send</i>Create account</button> -->
+    
+    </div>
+  </div>
+  <!-- End of mobile-column-container -->
+</div>
+</section>
+<!-- End of section container -->
+    
+    </form>
+  </div>
+
